@@ -2,6 +2,7 @@ using System;
 using Ultraviolet;
 using Ultraviolet.BASS;
 using Ultraviolet.Content;
+using Ultraviolet.FreeType2;
 using Ultraviolet.Graphics;
 using Ultraviolet.Graphics.Graphics2D;
 using Ultraviolet.Input;
@@ -19,6 +20,7 @@ namespace uvgame
         {
             var configuration = new OpenGLUltravioletConfiguration();
             configuration.Plugins.Add(new BASSAudioPlugin());
+            configuration.Plugins.Add(new FreeTypeFontPlugin());
 
 #if DEBUG
             configuration.Debug = true;
