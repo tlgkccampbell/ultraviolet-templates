@@ -1,0 +1,36 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Cole Campbell",
+  "classifications": [ "ultraviolet", "game" ],
+  "name": "Ultraviolet Game",
+  "identity": "Ultraviolet.Templates.uvgame.CSharp",
+  "groupIdentity": "Ultraviolet.Templates.uvgame",
+  "shortName": "uvgame",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "uvgame",
+  "preferNameDirectory": true,
+  "symbols": {
+    "developer": {
+      "type": "parameter",
+      "replaces": "DEVELOPER_PLACEHOLDER",
+      "isRequired": true
+    },
+    "application": {
+      "type": "parameter",
+      "replaces": "APPLICATION_PLACEHOLDER",
+      "isRequired": true
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ ".vs/**" ]
+        }
+      ]
+    }
+  ]
+}

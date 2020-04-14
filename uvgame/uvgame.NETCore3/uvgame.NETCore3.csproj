@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".template.config\**" />
+    <EmbeddedResource Remove=".template.config\**" />
+    <None Remove=".template.config\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ultraviolet" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.BASS" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.Core" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.FreeType2" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.OpenGL" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.OpenGL.Bindings" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.SDL2" Version="2020.4.0.4231" />
+    <PackageReference Include="Ultraviolet.Shims.NETCore3" Version="2020.4.0.4231" />
+  </ItemGroup>
+
+  <Import Project="..\uvgame.Shared\uvgame.Shared.projitems" Label="Shared" />
+
+</Project>
