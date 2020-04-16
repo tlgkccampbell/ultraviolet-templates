@@ -10,15 +10,7 @@ using Ultraviolet.OpenGL;
 
 namespace uvgame
 {
-#if ANDROID
-    [Android.App.Activity(Label = "APPLICATION_PLACEHOLDER", MainLauncher = true, ConfigurationChanges =
-        Android.Content.PM.ConfigChanges.Orientation |
-        Android.Content.PM.ConfigChanges.ScreenSize |
-        Android.Content.PM.ConfigChanges.KeyboardHidden)]
-    public partial class Game : UltravioletActivity
-#else
     public partial class Game : UltravioletApplication
-#endif
     {
         public Game()
             : base("DEVELOPER_PLACEHOLDER", "APPLICATION_PLACEHOLDER")
@@ -30,6 +22,7 @@ namespace uvgame
             configuration.Plugins.Add(new BASSAudioPlugin());
             configuration.Plugins.Add(new FreeTypeFontPlugin());
 
+//-:cnd:noEmit
 #if DEBUG
             configuration.Debug = true;
             configuration.DebugLevels = DebugLevels.Error | DebugLevels.Warning;
@@ -38,6 +31,7 @@ namespace uvgame
                 System.Diagnostics.Debug.WriteLine(message);
             };
 #endif
+//+:cnd:noEmit
 
             return new OpenGLUltravioletContext(this, configuration);
         }
