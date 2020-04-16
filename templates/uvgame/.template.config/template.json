@@ -22,13 +22,35 @@
       "type": "parameter",
       "replaces": "APPLICATION_PLACEHOLDER",
       "isRequired": true
+    },
+    "include-android": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
     }
   },
   "sources": [
     {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        ".vs/"
+      ],
       "modifiers": [
         {
-          "exclude": [ ".vs/**" ]
+          "condition": "(!include-android)",
+          "exclude": [ "uvgame.Android/**", "uvgame-WithAndroid.sln" ]
+        },
+        {
+          "condition": "(include-android)",
+          "exclude": [ "uvgame.sln" ],
+          "rename": {
+            "uvgame-WithAndroid.sln": "uvgame.sln"
+          }
         }
       ]
     }

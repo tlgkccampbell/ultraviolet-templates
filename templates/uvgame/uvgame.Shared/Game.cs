@@ -10,7 +10,15 @@ using Ultraviolet.OpenGL;
 
 namespace uvgame
 {
-    public class Game : UltravioletApplication
+#if ANDROID
+    [Android.App.Activity(Label = "APPLICATION_PLACEHOLDER", MainLauncher = true, ConfigurationChanges =
+        Android.Content.PM.ConfigChanges.Orientation |
+        Android.Content.PM.ConfigChanges.ScreenSize |
+        Android.Content.PM.ConfigChanges.KeyboardHidden)]
+    public partial class Game : UltravioletActivity
+#else
+    public partial class Game : UltravioletApplication
+#endif
     {
         public Game()
             : base("DEVELOPER_PLACEHOLDER", "APPLICATION_PLACEHOLDER")
@@ -32,6 +40,12 @@ namespace uvgame
 #endif
 
             return new OpenGLUltravioletContext(this, configuration);
+        }
+
+        protected override void OnInitialized()
+        {
+            UsePlatformSpecificFileSource();
+            base.OnInitialized();
         }
 
         protected override void OnLoadingContent()
