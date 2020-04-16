@@ -13,18 +13,21 @@
   "sourceName": "uvgame",
   "preferNameDirectory": true,
   "symbols": {
-    "developer": {
+    "Developer": {
       "type": "parameter",
+      "description": "The name of the developer or organization which is building the application.",
       "replaces": "DEVELOPER_PLACEHOLDER",
       "isRequired": true
     },
-    "application": {
+    "Application": {
       "type": "parameter",
+      "description": "The full name of the application.",
       "replaces": "APPLICATION_PLACEHOLDER",
       "isRequired": true
     },
-    "include-android": {
+    "IncludeAndroid": {
       "type": "parameter",
+      "description": "A value indicating whether to include support for Android.",
       "datatype": "bool",
       "defaultValue": "false"
     }
@@ -42,11 +45,11 @@
       ],
       "modifiers": [
         {
-          "condition": "(!include-android)",
+          "condition": "(!IncludeAndroid)",
           "exclude": [ "uvgame.Android/**", "uvgame-WithAndroid.sln" ]
         },
         {
-          "condition": "(include-android)",
+          "condition": "(IncludeAndroid)",
           "exclude": [ "uvgame.sln" ],
           "rename": {
             "uvgame-WithAndroid.sln": "uvgame.sln"
