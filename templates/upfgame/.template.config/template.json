@@ -52,7 +52,7 @@
           "condition": "(IncludeAndroid)",
           "exclude": [ "upfgame.sln" ],
           "rename": {
-            "uvgame-WithAndroid.sln": "upfgame.sln"
+            "upfgame-WithAndroid.sln": "upfgame.sln"
           }
         }
       ]
