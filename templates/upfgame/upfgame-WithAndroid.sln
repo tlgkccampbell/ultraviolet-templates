@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "upfgame.NETCore3", "upfgame.NETCore3\upfgame.NETCore3.csproj", "{AFBA0780-A3DA-45AB-9585-AA5764C60B31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "upfgame.Android", "upfgame.Android\upfgame.Android.csproj", "{7BC11524-770B-41E5-A076-F37EB84C3A67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AFBA0780-A3DA-45AB-9585-AA5764C60B31} = {AFBA0780-A3DA-45AB-9585-AA5764C60B31}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
