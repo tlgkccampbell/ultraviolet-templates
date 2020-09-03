@@ -7,6 +7,7 @@ using Ultraviolet.Graphics;
 using Ultraviolet.Graphics.Graphics2D;
 using Ultraviolet.Input;
 using Ultraviolet.OpenGL;
+using Ultraviolet.SDL2;
 
 namespace uvgame
 {
@@ -18,7 +19,8 @@ namespace uvgame
 
         protected override UltravioletContext OnCreatingUltravioletContext()
         {
-            var configuration = new OpenGLUltravioletConfiguration();
+            var configuration = new SDL2UltravioletConfiguration();
+            configuration.Plugins.Add(new OpenGLGraphicsPlugin());
             configuration.Plugins.Add(new BASSAudioPlugin());
             configuration.Plugins.Add(new FreeTypeFontPlugin());
 
@@ -33,7 +35,7 @@ namespace uvgame
 #endif
 //+:cnd:noEmit
 
-            return new OpenGLUltravioletContext(this, configuration);
+            return new SDL2UltravioletContext(this, configuration);
         }
 
         protected override void OnInitialized()
