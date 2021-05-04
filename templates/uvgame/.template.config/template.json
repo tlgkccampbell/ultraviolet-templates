@@ -3,14 +3,14 @@
   "author": "Cole Campbell",
   "classifications": [ "ultraviolet", "game" ],
   "name": "Ultraviolet Game",
-  "identity": "Ultraviolet.Templates.uvgame.CSharp",
-  "groupIdentity": "Ultraviolet.Templates.uvgame",
-  "shortName": "uvgame",
+  "identity": "Ultraviolet.Templates.UvGame.CSharp",
+  "groupIdentity": "Ultraviolet.Templates.UvGame",
+  "shortName": "UvGame",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "uvgame",
+  "sourceName": "UvGame",
   "preferNameDirectory": true,
   "symbols": {
     "Developer": {
@@ -46,13 +46,13 @@
       "modifiers": [
         {
           "condition": "(!IncludeAndroid)",
-          "exclude": [ "uvgame.Android/**", "uvgame-WithAndroid.sln" ]
+          "exclude": [ "UvGame.Android/**", "UvGame-WithAndroid.sln" ]
         },
         {
           "condition": "(IncludeAndroid)",
-          "exclude": [ "uvgame.sln" ],
+          "exclude": [ "UvGame.sln" ],
           "rename": {
-            "uvgame-WithAndroid.sln": "uvgame.sln"
+            "UvGame-WithAndroid.sln": "UvGame.sln"
           }
         }
       ]

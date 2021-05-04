@@ -3,14 +3,14 @@
   "author": "Cole Campbell",
   "classifications": [ "ultraviolet", "game" ],
   "name": "Ultraviolet Presentation Foundation Game",
-  "identity": "Ultraviolet.Templates.upfgame.CSharp",
-  "groupIdentity": "Ultraviolet.Templates.upfgame",
-  "shortName": "upfgame",
+  "identity": "Ultraviolet.Templates.UpfGame.CSharp",
+  "groupIdentity": "Ultraviolet.Templates.UpfGame",
+  "shortName": "UpfGame",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "upfgame",
+  "sourceName": "UpfGame",
   "preferNameDirectory": true,
   "symbols": {
     "Developer": {
@@ -46,13 +46,13 @@
       "modifiers": [
         {
           "condition": "(!IncludeAndroid)",
-          "exclude": [ "upfgame.Android/**", "upfgame-WithAndroid.sln" ]
+          "exclude": [ "UpfGame.Android/**", "UpfGame-WithAndroid.sln" ]
         },
         {
           "condition": "(IncludeAndroid)",
-          "exclude": [ "upfgame.sln" ],
+          "exclude": [ "UpfGame.sln" ],
           "rename": {
-            "upfgame-WithAndroid.sln": "upfgame.sln"
+            "UpfGame-WithAndroid.sln": "UpfGame.sln"
           }
         }
       ]
