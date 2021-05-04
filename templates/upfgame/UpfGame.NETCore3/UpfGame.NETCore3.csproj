@@ -16,14 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ultraviolet" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.BASS" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.FreeType2" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.OpenGL" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.Presentation" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.Presentation.Compiler" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.SDL2" Version="2020.12.0.4509" />
-    <PackageReference Include="Ultraviolet.Shims.NETCore3" Version="2020.12.0.4509" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="Ultraviolet" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.BASS" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.FreeType2" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.OpenGL" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.Presentation" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.Presentation.Compiler" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.SDL2" Version="2021.5.0.4563" />
+    <PackageReference Include="Ultraviolet.Shims.NETCore3" Version="2021.5.0.4563" />
   </ItemGroup>
 
   <Import Project="..\UpfGame.Shared\UpfGame.Shared.projitems" Label="Shared" />
