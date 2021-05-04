@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.2.5</PackageVersion>
+    <PackageVersion>1.2.6</PackageVersion>
     <PackageId>Ultraviolet.Templates</PackageId>
     <Title>Ultraviolet Framework Templates</Title>
     <Authors>Cole Campbell</Authors>
